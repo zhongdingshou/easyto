@@ -1,0 +1,11 @@
+<!--pages/user/approve/approve.wxml-->
+<view class='main'>
+<form bindsubmit='approveFormSubmit'>
+  <view class='li-item li-school'><text>校园 · 认证</text></view>
+  <view class='li-item li-id'>学号： <input class='edit-text' name="student_id" value='{{student_id}}'></input></view>
+  <view class='li-item li-name'>姓名： <input class='edit-text' name="compellation" value='{{compellation}}'></input></view>
+  <button class='form-btn' form-type='submit'>确定</button>
+</form>
+</view>
+<view class='info'>认证之后可获得更多权限，您的信息安全将被保护</view>
+<view class='advice'>遇到问题？<text style='color:#0cf;' bindtap='send'>点击这里 </text> 发送反馈</view>

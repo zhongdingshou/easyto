@@ -1,0 +1,41 @@
+/* pages/user/approve/approve.wxss */
+.main {
+  margin: 140rpx auto;
+  width:80%;
+  border:2rpx solid #0CF;
+}
+.li-item{
+  height:100rpx;
+  line-height:100rpx;
+  border:1rpx solid #0CF;
+}
+.li-id,.li-name{
+  padding-left:50rpx;
+}
+.edit-text{
+  float:right;
+  width:76%;
+  height:80rpx;
+  padding:0 10rpx;
+  margin:10rpx 10rpx 0 0;
+  line-height:80rpx;
+  border:1rpx solid #0CF;
+}
+.li-school{
+  text-align: center;
+}
+.form-btn{
+  background-color:#0CF;
+  color:#FFF;
+}
+.info {
+  text-align: center;
+  font-size: 30rpx;
+  font-weight: bold;
+  height:4%;
+}
+.advice{
+  text-align: left;
+  font-size: 28rpx;
+  margin-left:66rpx;
+}

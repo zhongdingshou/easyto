@@ -1,0 +1,52 @@
+<!--pages/user/mygoods/mygoods.wxml-->
+<view class='wrap'>
+  <view class='top'>
+    <view class='goods_views'>浏览人数 | {{look}}</view>
+    物品详情
+    <view class='addtofvr' bindtap='deletegoods' data-goods_id="{{id}}">删除物品</view></view>
+  <swiper class='show-img' autoplay='true' interval='3000' indicator-dots='true' circular ='true'>
+  <block wx:for='{{goods_img}}' wx:for-item='img' wx:key='index'>
+   <swiper-item>
+     <image src='{{img}}' bindtap="bindViewTap" data-img="{{img}}"></image>
+   </swiper-item>
+   </block>
+  </swiper>
+  <view class='good-info'>
+    <view class='info-top'>
+      <!-- <text>名称 </text> -->
+      <text class='info-name'>{{goods_title}}</text>
+    </view>
+    <view class='info-mid'>
+      <text>价格(元) </text><text class='info-price'> ￥{{goods_prom_price}}</text>
+      <text class='f-right info-username'>用户名 : {{nick_name}}</text>
+    </view>
+    <view class='info-dowm'>
+      <textarea disabled='true' class='info-describe' placeholder=''>{{goods_abstract}}</textarea>
+      <view wx:if="{{is_buy==0}}">
+      <view class='sellergoods' bindtap='buygoods' data-goods_id="{{id}}">如果您的物品已卖出，请点击此处！</view>
+      </view>
+      <view class="buygoods" wx:else>提示：您的物品已卖出 </view>
+      <view class='goods_type'><text class='ilb color-gray'>物品类型</text>#{{goods_category}}</view>
+      <view class='goods_time'><text class='ilb color-gray'>上架时间</text>{{create_time}}</view>
+    </view>
+    <view class='goods_user_name'><text class='ilb color-gray'>联系人</text>{{linkman}}</view>
+    <view class='goods_user_wx'><text class='ilb color-gray'>微信号</text>{{wechat_number}}</view>
+    <view class='goods_user_phone'><text class='ilb color-gray'>手机号码</text>{{phone_number}}</view>
+    <view class='messageBoard'>
+      <view class='messageBoard_top'>全部留言({{talks.length}})</view>
+       <view wx:if="{{talks.length!=0}}">
+      <block wx:for='{{talks}}' wx:for-item='mg' wx:key='mg'>
+        <view class='mg-list'>
+          <view class='li-l'><view class='mg-user' ><image src='{{mg.avatar_url}}'></image></view></view>
+          <view class='good-cont'>
+            <view class='mg-username'>{{mg.nick_name}}</view>
+            <view class='mg-time'>{{mg.create_time}}</view>
+            <view class='mg-dec'>{{mg.talk}}</view>
+          </view>
+        </view>
+      </block>
+      </view>
+       <view class="cart-null" wx:else> 暂无留言...</view>
+    </view>
+  </view>
+</view>

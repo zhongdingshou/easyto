@@ -1,0 +1,76 @@
+<block wx:if='{{hasUserInfo===true}}'>
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" data-img="{{userInfo.avatarUrl}}" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <view wx:if='{{show===1}}' class='log-in-again' bindtap='login_again'>清除缓存</view>
+      <view class='username'>{{userInfo.nickName}}</view>
+    </block>
+    <navigator url='./edit/edit' class='nav-item-edit'>
+      <image src='../../images/edit_icon.png'></image>
+    </navigator>
+    <view class='nav-item-about' bindtap='goabout'>
+      <image src='../../images/about_icon.png'></image>
+    </view>
+  </view>
+  <view>
+    <view class='tab'>
+      <view class='{{tabVal?"tab-list":"tab-list tab-list-cur"}}' bindtap='tab' data-val='0'>已发布</view>
+      <view class='{{tabVal?"tab-list tab-list-cur":"tab-list"}}' bindtap='tab' data-val='1'>已收藏</view>
+    </view>
+    <view class='content'>
+      <!-- 已发布 -->
+      <view class='{{tabVal?"tab-content":"tab-content tab-content-cur"}}'>
+        <view wx:if="{{releaseGoods.length!=0}}">
+          <block wx:for="{{releaseGoods}}" wx:for-item='good' wx:key='index'>
+            <navigator class='good-li' url='./mygoods/mygoods?id={{good.id}}'>
+            <view class='li-l'><view class='pubuser' ><image src='{{good.avatar_url}}'></image></view></view>
+            <view class='good-cont'>
+              <view class='pubusername'>{{good.nick_name}}</view>
+              <view class='pubdec'>{{good.goods_title}}</view>
+              <view class='is_audit'>{{good.is_audit}}</view>
+              <view class='pubimgbox'>
+                <block wx:for='{{good.goods_img}}' wx:for-item='goods_img' wx:key='imglist'>
+                  <image src='{{goods_img}}' mode='aspectFill'></image>
+                </block>
+              </view>
+               <view class='pubtype'>#{{good.goods_category}}</view>
+               <view class='is_buy'>{{good.is_buy}}</view>
+              <view class='pubtime'>{{good.create_time}}<view class='viewnum'>浏览人数 | {{good.look}}</view></view>
+            </view>
+            </navigator>
+          </block>
+        </view>
+        <view class="cart-null" wx:else> 您尚未发布物品... </view>
+      </view>
+
+      <view class='{{tabVal?"tab-content tab-content-cur":"tab-content"}}'>
+        <view wx:if="{{collectGoods.length!=0}}">
+          <block wx:for="{{collectGoods}}" wx:for-item='good' wx:key='index'>
+            <navigator class='good-li' url='../index/detail/detail?id={{good.id}}'>
+            <view class='li-l'><view class='pubuser' ><image src='{{good.avatar_url}}'></image></view></view>
+            <view class='good-cont'>
+              <view class='pubusername'>{{good.nick_name}}</view>
+              <view class='is_approve'>{{good.is_approve}}</view>
+              <view class='pubdec'>{{good.goods_title}}</view>
+              <view class='pubimgbox'>
+                <block wx:for='{{good.goods_img}}' wx:for-item='img' wx:key='imglist'>
+                  <image src='{{img}}' mode='aspectFill'></image>
+                </block>
+              </view>
+               <view class='pubtype'>#{{good.goods_category}}</view>
+               <view class='is_buy'>{{good.is_buy}}</view>
+              <view class='pubtime'>{{good.create_time}}<view class='viewnum'>浏览人数 | {{good.look}}</view></view>
+            </view>
+            </navigator>
+          </block>
+        </view>
+        <view class="cart-null" wx:else> 您尚未收藏物品... </view>
+      </view>
+    </view>
+  </view>
+</block>
+<!-- 授权登陆 -->
+<block wx:else>
+  <button open-type='getUserInfo' bindgetuserinfo='gUserInfo' type='primary' style='margin:40% 50rpx 0;'>授权登陆</button>
+</block>

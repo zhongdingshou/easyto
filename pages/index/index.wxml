@@ -1,0 +1,48 @@
+<!--index.wxml-->
+<view class='wrap'>
+  <!-- 搜索 -->
+  <form class='search-box' bindsubmit='goodsSearch'>
+    <input class='search-text' name='title' type='text' placeholder='搜索物品...' placeholder-style='text-align:center;' value='{{keyword}}'></input>
+    <button class='search-btn' form-type='submit'>搜索</button>
+  </form>
+  <!-- 大图 -->
+  <swiper class='big-img' autoplay='true' interval='3000' indicator-dots='true' circular ='true'>
+  <block wx:for='{{slideUrls}}' wx:for-item='urls' wx:key='index'>
+   <swiper-item>
+     <image src='{{urls}}'></image>
+   </swiper-item>
+   </block>
+  </swiper>
+  <!-- 导航 -->
+  <view class='type-nav'>
+    <block wx:for='{{typeNav}}' wx:for-item='list' wx:key='index'>
+      <navigator class='type-li' url='./list/list?category={{list.category}}'>
+        <image src='{{list.img}}'></image>
+        <text>{{list.name}}</text>
+      </navigator>
+    </block>
+  </view>
+  <!-- 物品 -->
+  <view class='goods-box'>
+    <view wx:if="{{goods.length!=0}}">
+      <block wx:for='{{goods}}' wx:key='index'>
+        <navigator class='good-li' url='./detail/detail?id={{item.id}}'>
+          <view class='li-l'><view class='pubuser' ><image src='{{item.avatar_url}}'></image></view></view>
+          <view class='good-cont'>
+            <view class='pubusername'>{{item.nick_name}}</view>
+            <view class='is_approve'>{{item.is_approve}}</view>
+            <view class='pubdec'>{{item.goods_title}}</view>
+            <view class='pubimgbox'>
+            <block wx:for='{{item.goods_img}}' wx:for-item='img' wx:key='imglist'>
+              <image src='{{img}}' mode='aspectFill'></image>
+            </block>
+            </view>
+            <view class='pubtype'>#{{item.goods_category}}</view>
+            <view class='pubtime'>{{item.create_time}}<view class='viewnum'>浏览人数 | {{item.look}}</view></view>
+          </view>
+        </navigator>
+      </block>
+      </view>
+      <view class="cart-null" wx:else> 当前页面没有物品...</view>
+  </view>
+</view>

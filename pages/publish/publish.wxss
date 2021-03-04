@@ -1,0 +1,68 @@
+/* pages/publish/publish.wxss */
+@import '../../weui.wxss';
+.pub{
+  width:100%;
+}
+.pub-name{
+  height:80rpx;
+  padding-left:10rpx;
+  line-height:80rpx;
+}
+.pub-describe{
+  width:100%;
+  height:400rpx;
+  padding:20rpx 10rpx;
+  background-color:#F2F2F2;
+  box-sizing:border-box;
+}
+.pub-imgs-view{
+  height:190rpx;
+  background-color:#09F;
+}
+
+
+/* 新 */
+.isnew{
+  height:80rpx;
+  padding:0 20rpx 0 30rpx;
+  border-bottom:1rpx solid #E2E2E2;
+  line-height:80rpx;
+  overflow:hidden;
+}
+.isnew switch{
+  float:right;
+  height:80rpx;
+  line-height:80rpx;
+}
+/* 分类 */
+.pub-types{
+  position:relative;
+  height:80rpx;
+  padding:0 0 0 30rpx;
+  border-bottom:1rpx solid #E2E2E2;
+  line-height:80rpx;
+}
+.pub-types picker{
+  position:absolute;
+  left:0;
+  top:0;
+  width:100%;
+  text-align:center;
+}
+/* 价格 */
+.pub-price{
+  height:80rpx;
+  padding:0 0 0 30rpx;
+  border-bottom:1rpx solid #E2E2E2;
+  line-height:80rpx;
+}
+.pub-price input{
+  float:right;
+  width:70%;
+  height:80rpx;
+}
+/* 提交 */
+.pub-btn{}
+.pub-btn button{
+  margin:20rpx;
+}

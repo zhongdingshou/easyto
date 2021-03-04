@@ -1,0 +1,158 @@
+/* pages/index/list/list.wxss */
+page{
+}
+.wrap{}
+
+.search-box{
+  display: block;
+  width:100%;
+  height:60rpx;
+  margin-top:10rpx;
+  padding-bottom:10rpx;
+  font-size:30rpx;
+  box-shadow:1rpx 1rpx 2rpx #333;
+}
+.search-type{
+  float:left;
+  width:80rpx;
+  height:60rpx;
+  margin:0 0 0 16rpx;
+  border:1rpx solid #333;
+  line-height:60rpx;
+  box-sizing:border-box;
+  text-align:center;
+}
+.search-text{
+  float:left;
+  width:564rpx;
+  height:60rpx;
+  margin:0 0 0 22rpx;
+  padding-left:10rpx;
+  border:1rpx solid #333;
+  line-height:60rpx;
+}
+.search-btn{
+  width:120rpx;
+  height:60rpx;
+  line-height:60rpx;
+  font-size:30rpx;
+  color:#FFF;
+  background: #0cf;
+}
+
+/* 筛选 */
+.choose-box{
+  width:100%;
+  height:80rpx;
+  padding-left: 20rpx;
+  border-top:1rpx solid #333;
+  border-bottom:1rpx solid #CCCCCC;
+  text-align:center;
+  margin-bottom: 10rpx;
+}
+.choose-box>view{
+  float:left;
+  font-size: 24rpx;
+  padding: 10rpx 11rpx;
+  margin: 10rpx 12rpx;
+  border-radius:12rpx;
+  border:2rpx solid #cccccc;
+}
+.choose-one{
+  background: #0cf;
+  color:#FFF;
+}
+/* 商品 */
+.goods-box{
+  width:100%;
+  margin-top:10rpx;
+  padding-bottom:60rpx;
+  overflow:hidden;
+}
+.goods-box .good-li{
+  width:90%;
+  margin:0 auto;
+  background-color:#FFF;
+  box-sizing:border-box;
+  overflow:hidden;
+  border-bottom:2rpx solid #F1F1F1;
+}
+.li-l{
+  float:left;
+  width:16%;
+  height:100%;
+  padding:10rpx 0 20rpx;
+}
+.pubuser{
+  position:relative;
+  width:100%;
+  height:0;
+  padding-bottom:100%;
+  border-radius:50%;
+  overflow:hidden;
+}
+.pubuser image{
+  position:absolute;
+  width:100%;
+  height:100%;
+}
+.good-cont{
+  position: relative;
+  float:left;
+  width:82%;
+  height:100%;
+  padding:10rpx 0 20rpx;
+  margin-left:2%;
+}
+.good-cont .pubusername{
+  font-size:32rpx;
+  color:rgb(26, 92, 114);
+}
+.good-cont .pubdec{
+  min-height:50rpx;
+  line-height:50rpx;
+  font-size:32rpx;
+}
+.good-cont .is_approve{
+  position: absolute;
+  top:5rpx;
+  right:4rpx;
+  height:50rpx;
+  color:#0cf;
+  line-height:50rpx;
+  font-size:34rpx;
+}
+.good-cont .pubimgbox{
+  width:100%;
+  height:190rpx;
+  overflow:hidden;
+}
+.good-cont .pubimgbox image{
+  width:170rpx;
+  height:170rpx;
+  margin:10rpx 10rpx 10rpx 0;
+}
+.good-cont .pubtype{
+  height:40rpx;
+  line-height:40rpx;
+  font-size:26rpx;
+  color:rgb(26, 92, 114);
+}
+.good-cont .pubtime{
+  height:40rpx;
+  line-height:40rpx;
+  font-size:26rpx;
+}
+.good-cont .viewnum{
+  float:right;
+  color:#999;
+}
+.cart-null{
+  text-align: center;
+  margin-top: 30%;
+  font-size: 40rpx;
+  color:#D7D7D7
+}
+input.hidden{
+  display: none
+}

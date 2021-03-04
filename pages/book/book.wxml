@@ -1,0 +1,51 @@
+<!--pages/book/book.wxml-->
+  <view class='wrap'>
+    <view class='tab'>
+      <view class='{{tabVal?"tab-list":"tab-list tab-list-cur"}}' bindtap='tab' data-val='0'>书友圈</view>
+      <view class='{{tabVal?"tab-list tab-list-cur":"tab-list"}}' bindtap='tab' data-val='1'>我的说说</view>
+    </view>
+    <view class='content'>
+      <!-- 书友圈 -->
+      <view class='{{tabVal?"tab-content":"tab-content tab-content-cur"}}'>
+        <view wx:if="{{allSay.length!=0}}">
+          <block wx:for="{{allSay}}" wx:for-item='say' wx:key='index'>
+            <view class='say-li'>
+              <view class='li-l'><view class='pubuser' ><image src='{{say.avatar_url}}'></image></view></view>
+              <view class='say-cont'>
+                <view class='pubusername'>{{say.nick_name}}</view>
+                <view class='pubdec'>{{say.say}}</view>
+                <view class='pubtime'>{{say.create_time}}</view>
+              </view>
+              <view class='skr' bindtap='praise' data-say_id='{{say.id}}'>赞👍({{say.praise}})</view>
+              <view class='complain' bindtap='tread' data-say_id='{{say.id}}'>踩👎({{say.tread}})</view>
+            </view>
+          </block>
+        </view>
+        <view class="cart-null" wx:else> 尚未发现书友说说...</view>
+        <view class='bottom'>
+          <form bindsubmit='issueSay'>
+            <input name='nowsay' value='{{nowsay}}' placeholder='推荐一下你喜欢的书吧...' maxlength='-1'></input><button form-type='submit' size='mini'>分享</button>
+          </form>
+        </view>
+      </view>
+      <!-- 我的说说 -->
+      <view class='{{tabVal?"tab-content tab-content-cur":"tab-content"}}'>
+        <view wx:if="{{mySay.length!=0}}">
+          <block wx:for="{{mySay}}" wx:for-item='say' wx:key='index'>
+            <view class='say-li'>
+              <view class='li-l'><view class='pubuser' ><image src='{{say.avatar_url}}'></image></view></view>
+              <view class='say-cont'>
+                <view class='pubusername'>{{say.nick_name}}</view>
+                <view class='pubdec'>{{say.say}}</view>
+                <view class='pubtime'>{{say.create_time}}</view>
+              </view>
+              <view class='skr' bindtap='praise' data-say_id='{{say.id}}'>赞👍({{say.praise}})</view>
+              <view class='complain' bindtap='tread' data-say_id='{{say.id}}'>踩👎({{say.tread}})</view>
+              <view class='delete' bindtap='deletesay' data-say_id='{{say.id}}'>删除</view>
+            </view>
+          </block>
+        </view>
+        <view class="cart-null" wx:else> 您尚未发布说说... </view>
+      </view>
+    </view>
+  </view>

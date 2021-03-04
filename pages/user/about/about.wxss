@@ -1,0 +1,58 @@
+/* pages/user/about/about.wxss */
+.main{
+  width:100%;
+  padding: 0 10% 60rpx;
+}
+.li-l{
+  margin: 40rpx 0;
+  border-bottom:2rpx dashed #CCC;
+  min-height:100rpx;
+}
+.title{
+  text-align: center;
+}
+.content{
+  font-size: 34rpx;
+  margin: 20rpx 0;
+  line-height: 44rpx;
+}
+.create_time{
+  font-size: 28rpx;
+  text-align: right;
+  margin: 20rpx 0;
+}
+.cart-null{
+  text-align: center;
+  margin-top: 30%;
+  font-size: 40rpx;
+  color:#D7D7D7
+}
+
+/*底部*/
+.bottom{
+  position:fixed;
+  left:0;
+  bottom:0;
+  width:100%;
+  height:116rpx;
+  border-top:1rpx solid #F2F2F2;
+  background-color:#FFF;
+}
+.bottom input{
+  float:left;
+  width:74%;
+  height:80rpx;
+  line-height:80rpx;
+  margin:18rpx 0 0 4%;
+  border-bottom:1rpx solid #F2F2F2;
+  font-size:26rpx;
+}
+.bottom  button{
+  width:16%;
+  height:80rpx;
+  margin:18rpx 0 0 2%;
+  padding:0;
+  line-height:80rpx;
+  background-color:#0CF;
+  color:#FFF;
+}

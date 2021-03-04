@@ -1,0 +1,22 @@
+<!--pages/user/about/about.wxml-->
+<view class="main">
+  <view wx:if="{{msg.length!=0}}">
+    <block wx:for="{{msg}}" wx:for-item='about' wx:key='index'>
+      <view class='li-l'>
+        <view class='title'>{{about.title}}</view>
+        <view class='content'>{{about.content}}</view>
+        <view class='create_time'>{{about.create_time}}</view>
+      </view>
+    </block>
+  </view>
+  <view class="cart-null" wx:else> 团队尚未发布小程序信息... </view>
+</view>
+<view class='bottom'>
+          <form bindsubmit='issueadvice'>
+            <input name='youadvice' value='{{youadvice}}' placeholder='发送您的反馈信息、建议等...'></input><button form-type='submit' size='mini'>发送</button>
+          </form>
+        </view>
+
+
+
+

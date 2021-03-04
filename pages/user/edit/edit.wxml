@@ -1,0 +1,22 @@
+<!--pages/user/edit/edit.wxml-->
+<view class="wrap">
+  <view class='wrap-bg'>
+    <form bindsubmit='editFormSubmit'>
+      <view class='text-info'>
+        <text class='text-msg' bindtap="approve">{{is_approve}}</text>
+        <text class='text-rz' bindtap="approve">【去认证】</text>
+      </view>
+      <view class='li-photo-box'>
+      头像<image bindtap="bindViewTap" class="head-photo" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      </view>
+      <view class='li-item li-username'>昵称 <text class='edit-text'>{{userInfo.nickName}}</text></view>
+      <view class='li-item li-sex'>性别 <text class='edit-text'>{{userInfo.gender?userInfo.gender==1?"男":"女":"未知"}}</text></view>
+      <view class='li-item li-lxr'>联系人 <input class='edit-text' name="linkman" value='{{linkman}}'></input></view>
+      <view class='li-item li-wx'>微信号 <input class='edit-text' name="wechat_number" value='{{wechat_number}}'></input></view>
+      <view class='li-item li-phone'>手机号码 <input class='edit-text' name="phone_number" value='{{phone_number}}'></input></view>
+      <view class='info'>注：为了能让买家联系到您，请填写正确联系信息</view>
+      <view class='info'>填写联系方式之后才能发布物品，您的信息安全将被保护</view>
+      <button class='form-btn' form-type='submit'>确定</button>
+    </form>
+  </view>
+</view>

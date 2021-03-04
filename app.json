@@ -1,0 +1,52 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/publish/publish",
+    "pages/user/user",
+    "pages/logs/logs",
+    "pages/user/edit/edit",
+    "pages/user/mygoods/mygoods",
+    "pages/user/about/about",
+    "pages/user/approve/approve",
+    "pages/index/detail/detail",
+    "pages/index/list/list",
+    "pages/book/book"
+  ],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/home.png",
+        "selectedIconPath": "/images/home-hover.png"
+      },
+      {
+        "pagePath": "pages/publish/publish",
+        "text": "发布",
+        "iconPath": "/images/publish.png",
+        "selectedIconPath": "/images/public-hover.png"
+      },
+      {
+        "pagePath": "pages/book/book",
+        "text": "书世界",
+        "iconPath": "/images/comm.png",
+        "selectedIconPath": "/images/comm-hover.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "个人",
+        "iconPath": "/images/user.png",
+        "selectedIconPath": "/images/user-hover.png"
+      }
+    ],
+    "position": "bottom",
+    "borderStyle": "black",
+    "selectedColor": "#0CF"
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#0CF",
+    "navigationBarTitleText": "易起来",
+    "navigationBarTextStyle": "#fff"
+  }
+}

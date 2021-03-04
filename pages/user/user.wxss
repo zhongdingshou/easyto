@@ -1,0 +1,219 @@
+/* pages/user/user.wxss */
+page{
+background-color:#FFF;
+height:100%;
+}
+.color-gray{color:#999;}
+.color-dark{color:#333;}
+.userinfo{
+  position:relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding:60rpx 0 44rpx 0;
+  background-color: #0CF;
+}
+.log-in-again {
+  position: absolute;
+  right:5%;
+  width:146rpx;
+  height:70rpx;
+  line-height: 70rpx;
+  border-radius:20%;
+  text-align: center;
+  font-size:32rpx;
+  background: #00AED9;
+  color:#FFF;
+}
+.userinfo-avatar{
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 50%;
+}
+.username{
+  min-width:232rpx;
+  max-width:400rpx;
+  height:66rpx;
+  margin:22rpx 0 0 0;
+  line-height:66rpx;
+  color:#FFF;
+  text-align:center;
+  border-radius:10rpx;
+}
+/*导航组*/
+.nav-item-edit,
+.nav-item-about{
+  position:absolute;
+  right:120rpx;
+  bottom:20rpx;
+  width:60rpx;
+  height:60rpx;
+}
+.nav-item-edit image{
+  width:100%;
+  height:100%;
+}
+.nav-item-about{
+  right:20rpx;
+  width:60rpx;
+  height:60rpx;
+  border:1rpx solid #FFF;
+  line-height:60rpx;
+  text-align:center;
+  border-radius:50%;
+}
+.nav-item-about image{
+  width:12rpx;
+  height:34rpx;
+}
+
+.nav-group{
+  margin:0 10rpx 0;
+  padding:20rpx 1rpx;
+  border-radius:10rpx;
+}
+.nav-item{
+  height:100rpx;
+  margin:0;
+  line-height:100rpx;
+  text-align:center;
+  background-color: #fff;
+}
+
+
+/*已收藏 已发布*/
+.tab{
+  height:100rpx;
+  border-bottom:1rpx solid #F1F1F1;
+}
+.tab-list{
+  float:left;
+  width:50%;
+  height:100rpx;
+  line-height:100rpx;
+  text-align:center;
+}
+.tab-list:first-child{
+  border-right:1rpx solid #F1F1F1;
+}
+.tab-list-cur{
+  border-bottom:2rpx solid #0CF;
+}
+
+.content{
+  margin-top:20rpx;
+  padding-bottom: 60rpx;
+}
+.tab-content{
+  display:none;
+  width:100%;
+  overflow:hidden;
+}
+.tab-content-cur{
+  display:block;
+}
+
+/*已物品*/
+.good-li{
+  width:90%;
+  margin:0 auto;
+  background-color:#FFF;
+  box-sizing:border-box;
+  overflow:hidden;
+  border-bottom:2rpx solid #F1F1F1;
+}
+.li-l{
+  float:left;
+  width:16%;
+  height:100%;
+  padding:10rpx 0 20rpx;
+}
+.pubuser{
+  position:relative;
+  width:100%;
+  height:0;
+  padding-bottom:100%;
+  border-radius:50%;
+  overflow:hidden;
+}
+.pubuser image{
+  position:absolute;
+  width:100%;
+  height:100%;
+}
+.good-cont{
+  position: relative;
+  float:left;
+  width:82%;
+  height:100%;
+  padding:10rpx 0 20rpx;
+  margin-left:2%;
+}
+.good-cont .is_approve{
+  position: absolute;
+  top:5rpx;
+  right:4rpx;
+  height:50rpx;
+  color:#0cf;
+  line-height:50rpx;
+  font-size:34rpx;
+}
+.good-cont .pubusername{
+  font-size:32rpx;
+  color:rgb(26, 92, 114);
+}
+.good-cont .pubdec{
+  min-height:50rpx;
+  line-height:50rpx;
+  font-size:32rpx;
+  word-break:break-all;
+}
+.is_buy{
+  position: absolute;
+  border:1rpx #999 solid;
+  bottom:62rpx;
+  height:38rpx;
+  line-height: 32rpx;
+  left:154rpx;
+  font-size:30rpx;
+  color:rgb(26, 92, 114);
+}
+.is_audit{
+  position: absolute;
+  top:8rpx;
+  right:10rpx;
+  font-size: 34rpx;
+  color:#0CF;
+}
+.good-cont .pubimgbox{
+  width:100%;
+  height:190rpx;
+  overflow:hidden;
+}
+.good-cont .pubimgbox image{
+  width:170rpx;
+  height:170rpx;
+  margin:10rpx 10rpx 10rpx 0;
+}
+.good-cont .pubtype{
+  height:40rpx;
+  line-height:40rpx;
+  font-size:26rpx;
+  color:rgb(26, 92, 114);
+}
+.good-cont .pubtime{
+  height:40rpx;
+  line-height:40rpx;
+  font-size:26rpx;
+}
+.good-cont .viewnum{
+  float:right;
+  color:#999;
+}
+
+.cart-null{
+  text-align: center;
+  margin-top: 30%;
+  font-size: 40rpx;
+  color:#D7D7D7
+}
